@@ -1,0 +1,1175 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #030303;
+    font-family: "Chakra Petch", sans-serif;
+    
+}
+
+.linediv img {
+    display: flex;
+    align-items: end;
+    width: 666px;
+}
+
+
+
+
+.header {
+    margin-top: 10px;
+    height: 60px;
+    width: 100%;
+    background-color: #000;  
+    height: auto;
+    text-transform: uppercase;
+}
+
+.cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1140px;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+.navs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 603px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    background-color: #950740;
+    border-radius: 100%;
+
+}
+
+.circle img {
+    width: 50px;
+    height: 50px;
+
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 423px;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav ul li {
+    position: relative;
+    margin-right: 20px; /* отступы между пунктами */
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 0;
+    display: block;
+    position: relative;
+    
+}
+
+.nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: #950740; /* цвет линии */
+    box-shadow: 0 0 10px #950740, 0 0 40px #950740, 0 0 80px #950740;
+    text-shadow: 0 0 10px #950740, 0 0 40px #950740, 0 0 80px #950740;
+
+    transition: width 0.3s ease;
+}
+
+.nav ul li a:hover::after {
+    width: 100%; /* ширина линии равна ширине пункта меню */
+}
+
+.nav ul li a:hover {
+    text-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 120px #fff;
+    
+}
+
+
+.headBtn{
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase; 
+    font-size: 16px;
+    padding: 10px;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.button_line {
+    position: absolute;
+    display: block;
+}
+
+.button__line--top {
+    top: 0;
+    /* left: -100%; */
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #950740);
+    animation: anime1 1s infinite;
+}
+
+@keyframes anime1 {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* .headBtn:hover .button__line--top{
+    left: 100%;
+    transition: 1s;
+    transition-delay: .25s;
+} */
+
+.button__line--bottom {
+    bottom: 0;
+    /* right: -100%; */
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #950740);
+    animation: anime2 1s infinite;
+    animation-delay: .5s;
+}
+
+@keyframes anime2 {
+    0% {
+        right: -100%;
+    }
+    100% {
+        right: 100%;
+    }
+}
+@keyframes anime3 {
+    0% {
+        bottom: -100%;
+    }
+    100% {
+        bottom: 100%;
+    }
+}
+@keyframes anime4 {
+    0% {
+        top: -100%;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+/* .headBtn:hover .button__line--bottom{
+    right: 100%;
+    transition: 1s;
+    transition-delay: .25s;
+} */
+
+.button__line--left {
+    /* bottom: -100%; */
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(0deg, transparent, #950740);
+    animation: anime3 1s infinite;
+    animation-delay: .75s;
+}
+/* 
+.headBtn:hover .button__line--left{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0s;
+} */
+
+.button__line--right {
+    /* top: -100%; */
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #950740);
+    animation: anime4 1s infinite;
+    animation-delay: .25s;
+}
+
+/* .headBtn:hover .button__line--right{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0s;
+} */
+
+.headBtn:hover {
+    box-shadow: 0 0 10px #950740, 0 0 40px #950740, 0 0 80px #950740;
+    background-color: #950740;
+    border: 1px solid #fff;
+    /* transition-delay: .1s; */
+    border-radius: 10px;
+
+}
+
+.headMainContent {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end; /* Центрирует элементы по вертикали */
+    padding: 150px 150px;
+}
+
+.fdfd img{
+    color: #fff;
+    text-transform: lowercase;
+    font-size: 36px;
+    width: 460px;
+    filter: drop-shadow(0 0 10px #950740)
+            drop-shadow(0 0 20px #950740);
+    text-shadow: 0 0 10px #950740, 0 0 40px #950740, 0 0 60px #950740;    
+}
+
+
+.headMainContentH1{
+    
+    position: relative;
+    width: 600px;
+    height: 113px;
+    /* color: rgba(255, 255, 255, 0);  */
+    -webkit-text-stroke: 1px #fff; 
+    /* background-color: transparent; */
+    /* position: relative; */
+    color: #950740;
+    font-size: 96px;
+    text-shadow: 0 0 10px #950740, 0 0 40px #950740;
+    animation: animateText 2s infinite;
+}
+
+.headMainContentH2 {
+    color: #fff;
+    
+    width: 612px;
+    height: 90px;
+    font-size: 72px;
+    text-shadow: 0 0 10px #950740, 0 0 40px #950740, 0 0 80px #950740;
+}
+
+.headMainContentP {
+    text-transform: none;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 55px;
+    line-height: 23px; 
+    
+}
+
+.colorHead {
+    text-transform: none;
+    color: #950740;
+}
+
+/* About us section */
+
+.aboutUs {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 150px;
+}
+
+
+.ssss {
+    padding: 50px 60px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #fff;
+    background-color: rgba(149, 7, 64, .8);
+    box-shadow: 0 0 10px #950740, 0 0 40px #950740, 0 0 80px #950740;
+    border-radius: 10px;
+}
+
+.aboutUsMain {
+    width: 330px;
+    height: 317px;
+}
+
+
+.aboutUsIcon1, .aboutUsIcon2, .aboutUsIcon3 {
+    width: 90px;
+    height: 90px;
+}
+
+.aboutUsIcon1 img {
+    width: 70px;
+    text-align: center;
+    filter: drop-shadow(0 0 10px #fff) 
+            drop-shadow(0 0 20px #fff);
+}
+
+.aboutUsTitle1 {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-top: 35px;
+}
+
+.aboutUsSubTitle1 {
+    color: #B0B0B2;
+    font-size: 14px;
+    letter-spacing: 1px;
+    /* margin-top: 12px; */
+    line-height: 28px;
+}
+
+.aboutUsIcon2 img {
+    width: 98px;
+    filter: drop-shadow(0 0 10px #fff) 
+            drop-shadow(0 0 20px #fff);
+}
+
+.aboutUsTitle2 {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-top: 35px;
+}
+
+.aboutUsSubTitle2 {
+    color: #B0B0B2;
+    font-size: 14px;
+    letter-spacing: 1px;
+    /* margin-top: 12px; */
+    line-height: 28px;
+}
+
+.aboutUsIcon3 img {
+    width: 70px;
+    filter: drop-shadow(0 0 10px #fff) 
+            drop-shadow(0 0 20px #fff);
+}
+
+.aboutUsTitle3 {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 3px;
+    /* margin-top: 35px; */
+}
+
+.aboutUsSubTitle3 {
+    color: #B0B0B2;
+    font-size: 14px;
+    letter-spacing: 1px;
+    /* margin-top: 12px; */
+    line-height: 28px;
+}
+
+/* Service section */
+
+.service {
+    width: 1140px;
+    margin: 150px auto 0;
+}
+
+.serviceSubTitle {
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #950740;
+}
+
+.serviceTitle {
+    text-transform: uppercase;
+    font-size: 48px;
+    color: #fff;
+    text-shadow: 0 0 10px #950740, 0 0 40px #950740, 0 0 80px #950740;
+}
+
+.serviceCont {
+    width: 1140px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.serviceBlock {
+    position: relative;
+    width: 360px;
+    height: 227px;
+    background-color: rgba(149, 7, 64, 0.6);
+    border-radius: 10px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.serviceBlock:nth-child(2) { /* Второй столбец (2, 5, ...) */
+    margin-top: 80px;
+}
+
+.serviceBlock:nth-child(3) { /* Третий столбец (3, 6, ...) */
+    margin-top: 130px;
+}
+
+.serviceBlock:nth-child(5) { /* Третий столбец (3, 6, ...) */
+    margin-top: -15px;
+}
+
+.serviceBlock:nth-child(4) { /* Третий столбец (3, 6, ...) */
+    margin-top: -60px;
+}
+
+.serviceBlock:hover {
+    background-color: rgba(149, 7, 64, 1);
+    border: 1px solid #fff;
+    box-shadow: 0 0 10px #950740, 0 0 40px #950740, 0 0 80px #950740;
+    transition: .2s;
+}
+
+.serviceBlock:hover img {
+    opacity: 1;
+    filter: drop-shadow(0 0 10px #fff)
+            drop-shadow(0 0 20px #fff);
+}
+
+.serviceBlock img {
+    opacity: .5;
+    width: 48px;
+    height: 48px;
+    margin: 20px;
+}
+
+.blockTitle {
+    color: #fff;
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.blockSubTitle {
+    color: #B0B0B2;
+    margin-top: 6px;
+    margin-left: 20px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+/* Стиль для кнопки "Подробнее" */
+.more-btn {
+    position: absolute;
+    bottom: 35px; /* Отступ от нижнего края */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #950740;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Плавное появление */
+}
+
+.more-btn:hover {
+    background-color: #fff;
+    color: #950740;
+    transition: .3s;
+}
+
+/* Кнопка появляется при hover */
+.serviceBlock:hover .more-btn {
+    opacity: 1;
+}
+
+.serviceBlock:hover .blockSubTitle {
+    opacity: 0.2;
+}   
+
+/* Why choose us */
+
+.whyChooseUs {
+    display: flex;
+    justify-content: space-between;
+    width: 1140px;
+    margin: 150px auto 0;
+}
+
+.whyChooseUsSubTitle {
+    font-size: 16px;
+    color: #950740;
+    text-transform: uppercase;
+}
+
+.whyChooseUsTitle {
+    /* width: 516px; */
+    font-size: 48px;
+    color: #fff;
+    text-shadow: 0 0 10px #950740, 0 0 40px #950740, 0 0 80px #950740;
+}
+
+.whyChooseUsBlock {
+    margin-top: 30px;
+}
+
+.whyChooseUsBlockTitle {
+    font-size: 20px;
+    color: #fff;
+}
+
+.whyChooseUsBlockSubTitle {
+    margin-top: 12px;
+    font-size: 16px;
+    width: 516px;
+    color: #B0B0B2;
+}
+
+.whyChooseUsBlockLine {
+    width: 516px;
+    height: 1px;
+    background-color: #fff;
+    margin-top: 12px;
+}
+
+.line {
+    height: 600px;
+    width: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px #950740, 0 0 40px #950740, 0 0 80px #950740;
+    border: 1px solid #950740;
+    margin-left: 50px;
+    transform: rotate(45deg);
+    z-index: -2;
+}
+
+.contactUs {
+    width: 1140px;
+    margin: 150px auto 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contactUsTextSubTitle {
+    font-size: 16px;
+    color: #950740;
+    text-transform: uppercase;
+}
+
+.contactUsTextTitle {
+    font-size: 48px;
+    color: #fff;
+    text-shadow: 0 0 10px #950740, 0 0 40px #950740, 0 0 80px #950740;
+}
+
+.contactUsTextMid {
+    color: #fff;
+    font-size: 26px;
+    margin-top: 80px;
+}
+
+.contactUsTextMain {
+    color: #fff;
+    margin-top: 40px;
+}
+
+.das {
+    display: flex;
+    justify-content: space-between;
+    width: 545px;
+    margin-top: 15px;
+
+}
+
+.MainNum {
+    font-size: 24px;
+}
+
+
+.MainText {
+    width: 505px;
+}
+
+.MainTextTitle {
+    font-size: 24px;
+}
+
+.MainTextSubTitle {
+    font-size: 16px;
+    color: #B0B0B2;
+}
+
+.contactUsFrom {
+    /* background-color: rgba(149, 7, 64, 0.6); */
+
+    width: 545px;
+    height: 700px;
+    background-color: #950740;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    /* box-shadow: 0 0 10px #950740, 0 0 40px #950740, 0 0 80px #950740; */
+}
+
+/* .contactUsFrom:hover {
+    background-color: rgba(149, 7, 64, 1);
+    width: 545px;
+    height: 700px;
+    background-color: #950740;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #950740, 0 0 40px #950740, 0 0 80px #950740;
+} */
+
+.formMain {
+    margin-top: 50px;
+    margin-left: 50px;
+
+}
+
+.formTitle {
+    font-size: 36px;
+    color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
+}
+
+.formInput {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 445px;
+    /* justify-content: center; */
+}
+
+.formInput p {
+    color: #B0B0B2;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.formInput label {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 25px;
+}
+
+.formInput input {
+    margin-top: 15px;
+    width: 445px;
+    height: 36px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    background-color: #950740;
+    outline: none;
+    color: white;
+    padding-left: 10px;
+}
+
+.formInput input:focus {
+    transform: translateY(-5px);
+    transition: .3s;
+    box-shadow: 0 0 10px #fff;
+}
+
+.input1 {
+    width: 445px;
+    margin-top: 25px;
+}
+
+.input1 textarea {
+    width: 435px;
+    height: 80px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    background-color: #950740;
+    margin-top: 15px;
+    outline: none;
+    padding: 10px;
+    color: white;
+    font-size: 16px;  
+}
+
+.input1 textarea:focus {
+    transform: translateY(-5px);
+    transition: .3s;
+    box-shadow: 0 0 10px #fff;
+}
+
+.submitBtn {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    background-color: #950740;
+    font-size: 18px;
+    color: #fff;
+    margin: 40px auto 0;
+    cursor: pointer;
+}
+
+.submitBtn:hover {
+    box-shadow: 0 0 10px #fff;
+    background-color: #fff;
+    color: #950740;
+    border: 1px solid #fff;
+    /* transition-delay: .1s; */
+    border-radius: 10px;
+
+}
+
+
+textarea::-webkit-scrollbar {
+    width: 12px; /* Ширина вертикального скроллбара */
+    height: 12px; /* Высота горизонтального скроллбара */
+}
+
+/* Стили для фона скроллбара */
+textarea::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Цвет фона скроллбара */
+    border-radius: 10px; /* Закругляем края */
+}
+
+/* Стили для ползунка */
+textarea::-webkit-scrollbar-thumb {
+    background-color: #950740; /* Цвет ползунка */
+    border-radius: 10px; /* Закругляем края ползунка */
+    border: 2px solid #fff; /* Дополнительная обводка вокруг ползунка */
+}
+
+/* Стили при наведении на ползунок */
+textarea::-webkit-scrollbar-thumb:hover {
+    background-color: #76022a; /* Цвет ползунка при наведении */
+}
+
+/* Стили для угла, где сходятся горизонтальный и вертикальный скроллбары */
+textarea::-webkit-scrollbar-corner {
+    background-color: #f1f1f1; /* Цвет угла */
+}
+
+footer {
+    width: 1140px;
+    margin: 150px auto 70px;
+    display: flex;
+    justify-content: space-between;
+} 
+
+.foot1Title {
+    color: #950740;
+    font-size: 24px;
+}
+
+.foot1Text {
+    width: 660px;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.foot2Title {
+    color: #950740;
+    font-size: 24px;
+}
+
+.foot2Link {
+    color: #fff;
+    font-size: 14px;
+    margin-top: 11px;
+}
+
+.foot2Link a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding-bottom: 5px;
+}
+
+.foot2Link a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: #950740; /* цвет линии */
+    box-shadow: 0 0 10px #950740, 0 0 40px #950740, 0 0 80px #950740;
+    text-shadow: 0 0 10px #950740, 0 0 40px #950740, 0 0 80px #950740;
+
+    transition: width 0.3s ease;
+}
+
+.foot2Link a:hover::after {
+    width: 100%; /* ширина линии равна ширине пункта меню */
+    
+}
+
+.foot2Link a:hover {
+    text-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 120px #fff;
+}
+
+.foot3Title {
+    color: #950740;
+    font-size: 24px;
+}
+
+.foot3Sub {
+    color: #fff;
+    font-size: 16px;
+    margin-top: 14px;
+}
+
+.foot3Sub:hover {
+    color: #950740;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 14px;
+}
+
+.foot1Icon {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    width: 190px;
+}
+
+.icon1 img{
+    height: 40px;
+}
+.icon2 img{
+    height: 40px;
+}
+.icon3 img{
+    height: 40px;
+}
+
+.icon1:hover img{
+    filter: drop-shadow(0 0 10px #fff);
+    cursor: pointer;
+}
+.icon2:hover img{
+    filter: drop-shadow(0 0 10px #fff);
+    cursor: pointer;
+}
+.icon3:hover img{
+    filter: drop-shadow(0 0 10px #fff);
+    cursor: pointer;
+}
+
+.feedback {
+    max-width: 1440px;
+    width: 100%;
+}
+
+.feedback1 {
+    margin: 0 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1140px;
+    height: 1140px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+.feedback2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1040px;
+    height: 1040px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+.feedback3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 940px;
+    height: 940px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+.feedback4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 840px;
+    height: 840px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+.feedback5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 740px;
+    height: 740px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+.feedback6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 640px;
+    height: 640px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+.feedbackSun {
+    width: 440px;
+    height: 440px;
+    background-color: #950740;
+    border: 1px solid #f1f1f1;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #950740, 0 0 40px #950740, 0 0 80px #950740;
+
+}
+
+.feedbackSubTitle {
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #950740;
+    /* margin: 0 150px;  */
+}
+
+.feedbackTitle {
+    text-transform: uppercase;
+    font-size: 48px;
+    color: #fff;
+    text-shadow: 0 0 10px #950740, 0 0 40px #950740, 0 0 80px #950740;
+    /* margin: 0 150px !important;     */
+}
+
+
+/* max-width 480px */
+
+@media (max-width: 480px) {
+    /* About us section */
+
+    .aboutUs {
+        display: none;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .ssss {
+        display: block;
+        padding: 35px;
+        width: 100%;
+        max-width: 450px;
+        
+    }
+
+    .aboutUsMain {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+    }
+
+    .aboutUsIcon1, .aboutUsIcon2, .aboutUsIcon3 {
+        width: 90px;
+        height: 90px;
+        margin-top: 25px;
+    }
+
+    /* Why choose us */
+    .whyChooseUs {
+        display: block;
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .whyChooseUsSubTitle {
+        font-size: 14px;
+    }
+    
+    .whyChooseUsTitle {
+        font-size: 36px;
+    }
+    
+    .whyChooseUsBlock {
+        width: 100%;
+        max-width: 450px;
+        margin-top: 30px;
+    }
+    
+    .whyChooseUsBlockSubTitle {
+        margin-top: 12px;
+        font-size: 16px;
+        width: 100%;
+        color: #B0B0B2;
+    }
+    
+    .whyChooseUsBlockLine {
+        width: 100%;
+        max-width: 450px;
+        height: 1px;
+        background-color: #fff;
+        margin-top: 12px;
+    }
+       
+    .linediv img {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    /* Service */
+
+    .service {
+        margin-top: 0;
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .serviceSubTitle {
+        font-size: 14px;
+    }
+    
+    .serviceTitle {
+        font-size: 36px;
+    }
+    
+    .serviceCont {
+        width: 100%;
+        max-width: 450px;
+        margin-top: 10px;
+        display: block;
+    }
+    
+    .serviceBlock {
+        position: relative;
+        width: 100%;
+        max-width: 450px;
+        height: 227px;
+        background-color: #950740;
+        border: 1px solid #fff;
+        box-shadow: 0 0 10px #950740, 0 0 40px #950740, 0 0 80px #950740;
+        border-radius: 10px;
+        margin-top: 30px;
+    }
+    
+    .serviceBlock:nth-child(2) { /* Второй столбец (2, 5, ...) */
+        margin-top: 15px;
+    }
+    
+    .serviceBlock:nth-child(3) { /* Третий столбец (3, 6, ...) */
+        margin-top: 15px;
+    }
+    
+    .serviceBlock:nth-child(5) { /* Третий столбец (3, 6, ...) */
+        margin-top: 15px;
+    }
+    
+    .serviceBlock:nth-child(4) { /* Третий столбец (3, 6, ...) */
+        margin-top: 15px;
+    }
+    
+    .serviceBlock:hover {
+        background-color: rgba(149, 7, 64, 1);
+        border: 1px solid #fff;
+        box-shadow: 0 0 10px #950740, 0 0 40px #950740, 0 0 80px #950740;
+        transition: .2s;
+    }
+    
+    .serviceBlock:hover img {
+        opacity: 1;
+        filter: drop-shadow(0 0 10px #fff)
+                drop-shadow(0 0 20px #fff);
+    }
+    
+    .serviceBlock img {
+        opacity: 1;
+        width: 48px;
+        height: 48px;
+        margin: 20px;
+        filter: drop-shadow(0 0 10px #fff)
+                drop-shadow(0 0 20px #fff);
+    }
+    
+    .blockTitle {
+        color: #fff;
+        margin-top: 30px;
+        margin-left: 20px;
+        font-size: 20px;
+    }
+    
+    .blockSubTitle {
+        width: 330px;
+        color: #B0B0B2;
+        margin-top: 6px;
+        margin-left: 20px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    
+    /* Стиль для кнопки "Подробнее" */
+    .more-btn {
+        position: absolute;
+        bottom: 35px; /* Отступ от нижнего края */
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        background-color: #950740;
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        font-size: 16px;
+        text-transform: uppercase;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.3s ease; /* Плавное появление */
+    }
+    
+    .more-btn:hover {
+        background-color: #fff;
+        color: #950740;
+        transition: .3s;
+    }
+    
+    /* Кнопка появляется при hover */
+    .serviceBlock:hover .more-btn {
+        opacity: 1;
+    }
+    
+    .serviceBlock:hover .blockSubTitle {
+        opacity: 0.2;
+    }   
+
+
+
+    .header, .feedback, .contactUs, footer, br{
+        display: none;
+    }    
+
+
+}
